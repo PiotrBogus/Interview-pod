@@ -1,0 +1,6 @@
+framework module PagesLinks {
+  umbrella header "PagesLinks-umbrella.h"
+
+  export *
+  module * { export * }
+}

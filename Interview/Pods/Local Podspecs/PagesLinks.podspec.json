@@ -1,0 +1,32 @@
+{
+  "name": "PagesLinks",
+  "version": "0.1.0",
+  "summary": "A short description of PagesLinks.",
+  "homepage": "https://github.com/Piotr Bogus/PagesLinks",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Piotr Bogus": "bogus@wp.pl"
+  },
+  "source": {
+    "git": "https://github.com/Piotr Bogus/PagesLinks.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "14.1"
+  },
+  "source_files": "PagesLinks/**/*",
+  "exclude_files": "PagesLinks/Tests/**/*",
+  "frameworks": "UIKit",
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "PagesLinks/Tests/**/*.{swift}"
+    }
+  ],
+  "swift_version": "5.0"
+}

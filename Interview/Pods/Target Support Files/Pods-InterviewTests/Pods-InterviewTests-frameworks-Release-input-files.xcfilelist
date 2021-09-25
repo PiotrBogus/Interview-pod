@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-InterviewTests/Pods-InterviewTests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/MovieList/MovieList.framework
+${BUILT_PRODUCTS_DIR}/Networking/Networking.framework
+${BUILT_PRODUCTS_DIR}/PagesLinks/PagesLinks.framework
+${BUILT_PRODUCTS_DIR}/Shared/Shared.framework
+${BUILT_PRODUCTS_DIR}/Utils/Utils.framework

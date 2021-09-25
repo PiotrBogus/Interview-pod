@@ -1,0 +1,6 @@
+framework module MovieList {
+  umbrella header "MovieList-umbrella.h"
+
+  export *
+  module * { export * }
+}

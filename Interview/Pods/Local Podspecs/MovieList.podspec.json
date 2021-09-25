@@ -1,0 +1,41 @@
+{
+  "name": "MovieList",
+  "version": "0.1.0",
+  "summary": "A short description of MovieList.",
+  "homepage": "https://github.com/Piotr Bogus/MovieList",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Piotr Bogus": "bogusp01@stepstone.com"
+  },
+  "source": {
+    "git": "https://github.com/Piotr Bogus/MovieList.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "14.1"
+  },
+  "source_files": "MovieList/**/*",
+  "exclude_files": "MovieList/Tests/**/*",
+  "resources": "Networking/Module/**/*.{xcassets,json,storyboard,xib,xcdatamodeld}",
+  "dependencies": {
+    "Shared": [
+
+    ],
+    "Utils": [
+
+    ],
+    "Kingfisher": [
+
+    ]
+  },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "MovieList/Tests/**/*.{swift}"
+    }
+  ]
+}

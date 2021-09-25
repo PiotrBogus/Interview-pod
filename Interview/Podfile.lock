@@ -1,0 +1,61 @@
+PODS:
+  - Kingfisher (6.3.1)
+  - MovieList (0.1.0):
+    - Kingfisher
+    - Shared
+    - Utils
+  - MovieList/Tests (0.1.0):
+    - Kingfisher
+    - Shared
+    - Utils
+  - Networking (0.1.0):
+    - Shared
+    - Utils
+  - Networking/Tests (0.1.0):
+    - Shared
+    - Utils
+  - PagesLinks (0.1.0)
+  - PagesLinks/Tests (0.1.0)
+  - Shared (0.1.0)
+  - Utils (0.1.0):
+    - PagesLinks
+    - Shared
+
+DEPENDENCIES:
+  - Kingfisher
+  - MovieList (from `DevPods/MovieList`)
+  - MovieList/Tests (from `DevPods/MovieList`)
+  - Networking (from `DevPods/Networking`)
+  - Networking/Tests (from `DevPods/Networking`)
+  - PagesLinks (from `DevPods/PagesLinks`)
+  - PagesLinks/Tests (from `DevPods/PagesLinks`)
+  - Shared (from `DevPods/Shared`)
+  - Utils (from `DevPods/Utils`)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+
+EXTERNAL SOURCES:
+  MovieList:
+    :path: DevPods/MovieList
+  Networking:
+    :path: DevPods/Networking
+  PagesLinks:
+    :path: DevPods/PagesLinks
+  Shared:
+    :path: DevPods/Shared
+  Utils:
+    :path: DevPods/Utils
+
+SPEC CHECKSUMS:
+  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  MovieList: dac1c046cc0f3b101e0c1cae642545b00d3875a4
+  Networking: fb964de706984bec3805133e057453c54b67f823
+  PagesLinks: 490dae061dddf180ea9674056d39789901352725
+  Shared: ac70e7b4986cd22bae1c50344b55edc2f2b0642b
+  Utils: e57c5e577f99e40770a1c7126d4eb17723d864a2
+
+PODFILE CHECKSUM: 2359428447be2169a42d44e698a3276f4fadc753
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,24 @@
+{
+  "name": "Shared",
+  "version": "0.1.0",
+  "summary": "A short description of Shared.",
+  "homepage": "https://github.com/Piotr Bogus/Shared",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Piotr Bogus": "bogus@wp.pl"
+  },
+  "source": {
+    "git": "https://github.com/Piotr Bogus/Shared.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "14.1"
+  },
+  "source_files": "Shared/**/*",
+  "frameworks": "UIKit",
+  "swift_version": "5.0"
+}

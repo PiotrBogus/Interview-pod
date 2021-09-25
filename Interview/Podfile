@@ -1,0 +1,50 @@
+platform :ios, '14.1'
+workspace 'Interview.xcworkspace'
+project 'Interview.xcodeproj'
+
+def shared_pod
+  pod 'Shared', :path => 'DevPods/Shared'
+end
+
+def networking_pod
+  pod 'Networking', :path => 'DevPods/Networking', :testspecs => ['Tests']
+end
+
+def utils_pod
+  pod 'Utils', :path => 'DevPods/Utils'
+end
+
+def pagesLinks_pod
+  pod 'PagesLinks', :path => 'DevPods/PagesLinks', :testspecs => ['Tests']
+end
+
+def movieList_pod
+  pod 'MovieList', :path => 'DevPods/MovieList', :testspecs => ['Tests']
+end
+
+def development_pods
+  utils_pod
+  shared_pod
+  networking_pod
+  pagesLinks_pod
+  movieList_pod
+end
+
+target 'Interview' do
+  use_frameworks!
+  
+  pod 'Kingfisher'
+  development_pods
+end
+
+target 'InterviewTests' do
+  use_frameworks!
+
+  development_pods
+end
+
+target 'InterviewUITests' do
+  use_frameworks!
+
+  development_pods
+end
