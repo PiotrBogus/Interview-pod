@@ -13,6 +13,6 @@ final class MovieListIntegration: Presentable {
         let movieListViewController = MovieListBuilder().build(apiListFetcher: apiListFetcher,
                                                                detailsFetcher: MovieDetailsAPIFetcherIntegration())
         
-        push(viewController: movieListViewController, on: viewController)
+        present(viewController: movieListViewController, on: viewController)
     }
 }

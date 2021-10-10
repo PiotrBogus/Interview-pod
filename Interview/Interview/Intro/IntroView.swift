@@ -48,6 +48,10 @@ final class IntroView: BaseView {
         setUpLegalInfoTextViewConstraints()
     }
     
+    func updateWebsiteButtonVisibility(isHidden: Bool) {
+        websiteButton.isHidden = isHidden
+    }
+    
     private func setUpWebsiteButtonConstraints() {
         websiteButton.translatesAutoresizingMaskIntoConstraints = false
         

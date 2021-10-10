@@ -17,19 +17,24 @@ final class IntroViewController: BaseViewController {
     }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         castedView.delegate = self
+        title = ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         updateNavigationBarVisibility(isHidden: true, animated: animated)
+        castedView.updateWebsiteButtonVisibility(isHidden: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         updateNavigationBarVisibility(isHidden: false, animated: animated)
+        castedView.updateWebsiteButtonVisibility(isHidden: true)
     }
     
     private func updateNavigationBarVisibility(isHidden: Bool, animated: Bool) {
