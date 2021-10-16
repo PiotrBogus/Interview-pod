@@ -1,0 +1,26 @@
+{
+  "name": "UITestsCore",
+  "version": "1.0",
+  "homepage": "https://piotrbogus.com",
+  "summary": "UITestsCore",
+  "license": "Copyright (C) 2020-2021 PiotrBogus",
+  "authors": {
+    "PiotrBogus": "piotrbogus@piotrbogus.com"
+  },
+  "platforms": {
+    "ios": "14.1"
+  },
+  "source": {
+    "git": "git@github.com:PiotrBogus/Interview-pod.git",
+    "tag": "1.0"
+  },
+  "swift_versions": "5.4",
+  "source_files": "UITestsCore/**/*",
+  "frameworks": "XCTest",
+  "dependencies": {
+    "Shared": [
+
+    ]
+  },
+  "swift_version": "5.4"
+}

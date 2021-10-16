@@ -28,6 +28,10 @@ def movieList_pod
   pod 'MovieList', :path => 'DevPods/MovieList', :testspecs => ['Tests']
 end
 
+def uiTests_pod
+  pod 'UITestsCore', :path => 'DevPods/UITestsCore'
+end
+
 def development_pods
   utils_pod
   shared_pod
@@ -40,7 +44,7 @@ target 'Interview' do
   use_frameworks!
   
   pod 'Kingfisher'
-  development_pods
+  development_pods   
 end
 
 target 'InterviewTests' do
@@ -53,4 +57,6 @@ target 'InterviewUITests' do
   use_frameworks!
 
   development_pods
+  uiTests_pod
+  pod 'Criollo', git: 'https://github.com/PiotrBogus/Criollo.git', submodules: true
 end

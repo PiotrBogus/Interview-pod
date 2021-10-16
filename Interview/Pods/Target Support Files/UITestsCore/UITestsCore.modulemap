@@ -1,0 +1,6 @@
+framework module UITestsCore {
+  umbrella header "UITestsCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

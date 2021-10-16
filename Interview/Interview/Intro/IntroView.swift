@@ -1,6 +1,7 @@
 
 import Utils
 import UIKit
+import Shared
 
 protocol IntroViewDelegate: AnyObject {
     func didTapWebsiteButton()
@@ -33,6 +34,7 @@ final class IntroView: BaseView {
     }
     
     override func setUpSubviews() {
+        elementIdentifier = ElementIdentifiers.Intro.view
         backgroundColor = .introBackgroundColor
         setUpWebsiteButton()
         setUpEnterButton()
@@ -122,11 +124,13 @@ final class IntroView: BaseView {
     }
     
     private func setUpWebsiteButton() {
+        websiteButton.elementIdentifier = ElementIdentifiers.Intro.websiteButton
         websiteButton.setTitle("intro_screen_website_button_title".localized, for: .normal)
         websiteButton.addTarget(self, action: #selector(didTapWebsiteButton), for: .touchUpInside)
     }
     
     private func setUpEnterButton() {
+        enterButton.elementIdentifier = ElementIdentifiers.Intro.enterButton
         enterButton.setTitle("intro_screen_button_title".localized, for: .normal)
         enterButton.addTarget(self, action: #selector(didTapEnterButton), for: .touchUpInside)
     }
