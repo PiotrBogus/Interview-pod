@@ -1,3 +1,9 @@
+
+if ENV['BUNDLE_BIN_PATH'].nil?
+  puts '⚠️  Do not run cocoapods locally, use Bundler instead, eg. `bundle exec pod install`'
+  exit
+end
+
 platform :ios, '14.1'
 workspace 'Interview.xcworkspace'
 project 'Interview.xcodeproj'
