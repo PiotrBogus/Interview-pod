@@ -1,23 +1,20 @@
 {
   "name": "PagesLinks",
-  "version": "0.1.0",
-  "summary": "A short description of PagesLinks.",
-  "homepage": "https://github.com/Piotr Bogus/PagesLinks",
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
+  "version": "1.0",
+  "homepage": "https://piotrbogus.com",
+  "summary": "PagesLinks",
+  "license": "Copyright (C) 2020-2021 PiotrBogus",
   "authors": {
-    "Piotr Bogus": "bogus@wp.pl"
+    "PiotrBogus": "piotrbogus@piotrbogus.com"
   },
-  "source": {
-    "git": "https://github.com/Piotr Bogus/PagesLinks.git",
-    "tag": "0.1.0"
-  },
-  "swift_versions": "5.0",
   "platforms": {
     "ios": "14.1"
   },
+  "source": {
+    "git": "git@github.com:PiotrBogus/Interview-pod.git",
+    "tag": "1.0"
+  },
+  "swift_versions": "5.4",
   "source_files": "PagesLinks/**/*",
   "exclude_files": "PagesLinks/Tests/**/*",
   "frameworks": "UIKit",
@@ -28,5 +25,5 @@
       "source_files": "PagesLinks/Tests/**/*.{swift}"
     }
   ],
-  "swift_version": "5.0"
+  "swift_version": "5.4"
 }

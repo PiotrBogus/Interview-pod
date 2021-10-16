@@ -1,23 +1,23 @@
 PODS:
   - Kingfisher (6.3.1)
-  - MovieList (0.1.0):
+  - MovieList (1.0):
     - Kingfisher
     - Shared
     - Utils
-  - MovieList/Tests (0.1.0):
+  - MovieList/Tests (1.0):
     - Kingfisher
     - Shared
     - Utils
-  - Networking (0.1.0):
+  - Networking (1.0):
     - Shared
     - Utils
-  - Networking/Tests (0.1.0):
+  - Networking/Tests (1.0):
     - Shared
     - Utils
-  - PagesLinks (0.1.0)
-  - PagesLinks/Tests (0.1.0)
-  - Shared (0.1.0)
-  - Utils (0.1.0):
+  - PagesLinks (1.0)
+  - PagesLinks/Tests (1.0)
+  - Shared (1.0)
+  - Utils (1.0):
     - PagesLinks
     - Shared
 
@@ -50,12 +50,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
-  MovieList: dac1c046cc0f3b101e0c1cae642545b00d3875a4
-  Networking: fb964de706984bec3805133e057453c54b67f823
-  PagesLinks: 490dae061dddf180ea9674056d39789901352725
-  Shared: ac70e7b4986cd22bae1c50344b55edc2f2b0642b
-  Utils: e57c5e577f99e40770a1c7126d4eb17723d864a2
+  MovieList: 2918ca536e8c1f18fb47b8da706b41fc1aee3f01
+  Networking: 36a8c5618a9c302667a589c07e44a9d335015151
+  PagesLinks: 67639ff36262f18caaa32309855fc84cec19171e
+  Shared: daef0ce0d7ed8c878795eeac0969606cf9c4233c
+  Utils: 1e3e981a20eddc3fef6539bcc7ca4e615c72f3d8
 
-PODFILE CHECKSUM: 2359428447be2169a42d44e698a3276f4fadc753
+PODFILE CHECKSUM: e4fac438a373bd53d642c610cff0b80d3bc07889
 
 COCOAPODS: 1.10.1

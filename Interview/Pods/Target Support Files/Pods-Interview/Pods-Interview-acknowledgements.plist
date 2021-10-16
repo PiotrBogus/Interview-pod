@@ -67,7 +67,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright (C) 2020-2021 PiotrBogus</string>
 			<key>Title</key>
 			<string>MovieList</string>
 			<key>Type</key>
@@ -96,7 +96,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright (C) 2020-2021 PiotrBogus</string>
 			<key>Title</key>
 			<string>Networking</string>
 			<key>Type</key>
@@ -125,7 +125,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright (C) 2020-2021 PiotrBogus</string>
 			<key>Title</key>
 			<string>PagesLinks</string>
 			<key>Type</key>
@@ -154,7 +154,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright (C) 2020-2021 PiotrBogus</string>
 			<key>Title</key>
 			<string>Shared</string>
 			<key>Type</key>
@@ -183,7 +183,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 </string>
 			<key>License</key>
-			<string>MIT</string>
+			<string>Copyright (C) 2020-2021 PiotrBogus</string>
 			<key>Title</key>
 			<string>Utils</string>
 			<key>Type</key>
