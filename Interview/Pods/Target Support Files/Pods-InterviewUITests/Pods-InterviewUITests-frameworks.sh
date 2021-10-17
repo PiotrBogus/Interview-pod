@@ -181,6 +181,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/PagesLinks/PagesLinks.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Shared/Shared.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Utils/Utils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Criollo/Criollo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITestsCore/UITestsCore.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework"
@@ -189,6 +192,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/PagesLinks/PagesLinks.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Shared/Shared.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Utils/Utils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Criollo/Criollo.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/UITestsCore/UITestsCore.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

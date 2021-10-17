@@ -1,4 +1,7 @@
 PODS:
+  - CocoaAsyncSocket (7.6.5)
+  - Criollo (1.0.1):
+    - CocoaAsyncSocket (~> 7.6.5)
   - Kingfisher (6.3.1)
   - MovieList (1.0):
     - Kingfisher
@@ -17,11 +20,14 @@ PODS:
   - PagesLinks (1.0)
   - PagesLinks/Tests (1.0)
   - Shared (1.0)
+  - UITestsCore (1.0):
+    - Shared
   - Utils (1.0):
     - PagesLinks
     - Shared
 
 DEPENDENCIES:
+  - Criollo (from `https://github.com/PiotrBogus/Criollo.git`)
   - Kingfisher
   - MovieList (from `DevPods/MovieList`)
   - MovieList/Tests (from `DevPods/MovieList`)
@@ -30,13 +36,18 @@ DEPENDENCIES:
   - PagesLinks (from `DevPods/PagesLinks`)
   - PagesLinks/Tests (from `DevPods/PagesLinks`)
   - Shared (from `DevPods/Shared`)
+  - UITestsCore (from `DevPods/UITestsCore`)
   - Utils (from `DevPods/Utils`)
 
 SPEC REPOS:
   trunk:
+    - CocoaAsyncSocket
     - Kingfisher
 
 EXTERNAL SOURCES:
+  Criollo:
+    :git: https://github.com/PiotrBogus/Criollo.git
+    :submodules: true
   MovieList:
     :path: DevPods/MovieList
   Networking:
@@ -45,17 +56,28 @@ EXTERNAL SOURCES:
     :path: DevPods/PagesLinks
   Shared:
     :path: DevPods/Shared
+  UITestsCore:
+    :path: DevPods/UITestsCore
   Utils:
     :path: DevPods/Utils
 
+CHECKOUT OPTIONS:
+  Criollo:
+    :commit: ab3bd4961bc2abb753c99b4ea5279e1fa5af028d
+    :git: https://github.com/PiotrBogus/Criollo.git
+    :submodules: true
+
 SPEC CHECKSUMS:
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  Criollo: 4e8c33da5630ac1bb42ca490c8046fc9a62ab910
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
   MovieList: 2918ca536e8c1f18fb47b8da706b41fc1aee3f01
   Networking: 36a8c5618a9c302667a589c07e44a9d335015151
   PagesLinks: 67639ff36262f18caaa32309855fc84cec19171e
   Shared: daef0ce0d7ed8c878795eeac0969606cf9c4233c
+  UITestsCore: 400d17498513e7488d264d3f1eb5f6d7e3f8bd05
   Utils: 1e3e981a20eddc3fef6539bcc7ca4e615c72f3d8
 
-PODFILE CHECKSUM: e4fac438a373bd53d642c610cff0b80d3bc07889
+PODFILE CHECKSUM: e0b48043b8975c02725ee96482a4f4b3b85d74f2
 
 COCOAPODS: 1.10.1
