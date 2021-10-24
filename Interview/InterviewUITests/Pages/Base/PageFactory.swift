@@ -10,6 +10,7 @@ final class PageFactory {
     private lazy var safariApp = XCUIApplication(bundleIdentifier: "com.apple.mobilesafari")
 
     private(set) lazy var sharedWebCredential = SharedWebCredentialPage(app: app, test: test)
+    private(set) lazy var keyboard = KeyboardPage(app: app)
     private(set) lazy var toast = ToastPage(app: app)
     private(set) lazy var tabBar = TabBarPage(app: app)
     private(set) lazy var intro = IntroPage(app: app)

@@ -10,7 +10,7 @@ final class MovieListAPIFetcherIntegration: MovieListAPIFetcher {
     
     private let networkingService: NetworkingService
     
-    init(networkingService: NetworkingService = DefaultNetworkingService(baseURL: .baseURL)) {
+    init(networkingService: NetworkingService = DefaultNetworkingService(baseURL: BaseUrlBuilder().baseURL)) {
         self.networkingService = networkingService
     }
     

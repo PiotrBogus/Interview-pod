@@ -1,0 +1,16 @@
+PODS:
+  - UITestsCore (0.1.0)
+
+DEPENDENCIES:
+  - UITestsCore (from `../`)
+
+EXTERNAL SOURCES:
+  UITestsCore:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UITestsCore: ea63477385c98f3b7b3e52c2d129d17b7eec70fd
+
+PODFILE CHECKSUM: c73e0a20a453e58776dff62b840d89eec7bfaa9e
+
+COCOAPODS: 1.10.1
