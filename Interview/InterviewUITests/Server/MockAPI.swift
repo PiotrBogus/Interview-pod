@@ -9,7 +9,7 @@ enum MockAPI {
     var files: [MockFile] {
         switch self {
         case .movieList: return [
-                MockFile(path: "/movieList/.*", fileName: "movieList", usingRegex: true)
+                MockFile(path: "/", fileName: "movieList", usingRegex: true)
             ]
         }
     }
