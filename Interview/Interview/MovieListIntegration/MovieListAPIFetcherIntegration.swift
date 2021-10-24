@@ -3,6 +3,7 @@ import Foundation
 import Shared
 import Networking
 import MovieList
+import Combine
 
 final class MovieListAPIFetcherIntegration: MovieListAPIFetcher {
 
@@ -14,12 +15,12 @@ final class MovieListAPIFetcherIntegration: MovieListAPIFetcher {
         self.networkingService = networkingService
     }
     
-    func fetchList(for searchedPhrase: String, page: Int, completion: @escaping MovieListFetchCompletion) {
+    func fetchList(for searchedPhrase: String, page: Int, completion: @escaping MovieListFetchCompletion) -> AnyCancellable? {
         let args = ["apikey": .apiKey,
                     "type": "movie",
                     "s": searchedPhrase,
                     "page": String(page)]
         let endpointDefiniton = CallableEndoint(endpoint: endpoint, type: .get(args: args))
-        networkingService.request(with: endpointDefiniton, completion: completion)
+        return networkingService.request(with: endpointDefiniton, completion: completion)
     }
 }

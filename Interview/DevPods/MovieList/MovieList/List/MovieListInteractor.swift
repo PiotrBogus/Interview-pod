@@ -12,17 +12,16 @@ protocol MovieListInteractorDelegate: AnyObject {
 
 protocol MovieListInteractorInterface {
     var delegate: MovieListInteractorDelegate? { get set }
-
+    
     func fetchMovieList(for searchedPahse: String)
     func fetchMoreMovies(for searchedPhrase: String, page: Int)
 }
 
 final class MovieListInteractor: MovieListInteractorInterface {
     
-    private let apiListFetcher: MovieListAPIFetcher
-    
     weak var delegate: MovieListInteractorDelegate?
-    
+
+    private let apiListFetcher: MovieListAPIFetcher
     private var cancelables: [AnyCancellable] = []
     
     init(apiListFetcher: MovieListAPIFetcher) {
@@ -30,8 +29,7 @@ final class MovieListInteractor: MovieListInteractorInterface {
     }
     
     func fetchMovieList(for searchedPhrase: String) {
-        
-        apiListFetcher.fetchList(for: searchedPhrase, page: 1) { [weak self] result in
+        let publisher = apiListFetcher.fetchList(for: searchedPhrase, page: 1) { [weak self] result in
             guard let movieList = try? result.get() else {
                 self?.delegate?.didFailFetchMovieList()
                 return
@@ -39,10 +37,11 @@ final class MovieListInteractor: MovieListInteractorInterface {
             
             self?.delegate?.didFetch(movieList: movieList)
         }
+        publisher?.store(in: &cancelables)
     }
     
     func fetchMoreMovies(for searchedPhrase: String, page: Int) {
-        apiListFetcher.fetchList(for: searchedPhrase, page: page) { [weak self] result in
+        let publisher = apiListFetcher.fetchList(for: searchedPhrase, page: page) { [weak self] result in
             guard let movieList = try? result.get() else {
                 self?.delegate?.didFailFetchMoreMovie()
                 return
@@ -50,5 +49,7 @@ final class MovieListInteractor: MovieListInteractorInterface {
             
             self?.delegate?.didFetchMore(movieList: movieList)
         }
+        
+        publisher?.store(in: &cancelables)
     }
 }

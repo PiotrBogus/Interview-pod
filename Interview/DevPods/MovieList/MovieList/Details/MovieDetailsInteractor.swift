@@ -1,6 +1,7 @@
 
 import Foundation
 import Shared
+import Combine
 
 protocol MovieDetailsInteractorDelegate: AnyObject {
     func didFetch(movie: Movie)
@@ -14,17 +15,18 @@ protocol MovieDetailsInteractorInterface {
 }
 
 final class MovieDetailsInteractor: MovieDetailsInteractorInterface {
-        
-    private let detailsFetcher: MovieDetailsAPIFetcher
-    
+            
     weak var delegate: MovieDetailsInteractorDelegate?
+    
+    private let detailsFetcher: MovieDetailsAPIFetcher
+    private var cancelables: [AnyCancellable] = []
     
     init(detailsFetcher: MovieDetailsAPIFetcher) {
         self.detailsFetcher = detailsFetcher
     }
     
     func fetchDetails(for id: String) {
-        detailsFetcher.fetchDetails(for: id) { [weak self] result in
+        let publisher = detailsFetcher.fetchDetails(for: id) { [weak self] result in
             guard let movie = try? result.get() else {
                 self?.delegate?.didFailFetch()
                 return
@@ -32,5 +34,7 @@ final class MovieDetailsInteractor: MovieDetailsInteractorInterface {
             
             self?.delegate?.didFetch(movie: movie)
         }
+        
+        publisher?.store(in: &cancelables)
     }
 }

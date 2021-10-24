@@ -4,12 +4,6 @@ import Shared
 import Utils
 import Combine
 
-public protocol NetworkCancellable {
-    func cancel()
-}
-
-extension URLSessionDataTask: NetworkCancellable {}
-
 final class APICall<Response: Codable> {
     
     typealias Completion = (Result<Response,NetworkingError>) -> Void
@@ -28,16 +22,15 @@ final class APICall<Response: Codable> {
             return nil
         }
         
-        
         let publisher = URLSession.shared.dataTaskPublisher(for: request)
-            .tryMap{ element -> Data in
-                guard let httpResponse = element.response as? HTTPURLResponse,
+            .tryMap{ data, response in
+                guard let httpResponse = response as? HTTPURLResponse,
                       httpResponse.statusCode == 200 else {
                           Logger.error("Bad request")
                           throw URLError(.badServerResponse)
                       }
                 
-                return element.data
+                return data
             }
             .decode(type: Response.self, decoder: JSONDecoder())
             .sink(receiveCompletion: { receivedCompletion in
