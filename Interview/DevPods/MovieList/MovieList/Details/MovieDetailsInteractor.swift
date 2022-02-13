@@ -26,15 +26,11 @@ final class MovieDetailsInteractor: MovieDetailsInteractorInterface {
     }
     
     func fetchDetails(for id: String) {
-        let publisher = detailsFetcher.fetchDetails(for: id) { [weak self] result in
-            guard let movie = try? result.get() else {
-                self?.delegate?.didFailFetch()
-                return
-            }
-            
-            self?.delegate?.didFetch(movie: movie)
-        }
-        
-        publisher?.store(in: &cancelables)
+        detailsFetcher.fetchDetails(for: id)
+            .sink(
+                receiveCompletion: { _ in },
+                receiveValue: { [weak self] movie in
+                    self?.delegate?.didFetch(movie: movie)
+            }).store(in: &cancelables)
     }
 }

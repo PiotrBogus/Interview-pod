@@ -1,4 +1,3 @@
-
 require_relative '../SetUp'
 
 Pod::Spec.new do |s|
@@ -16,5 +15,6 @@ Pod::Spec.new do |s|
   s.dependency 'Shared'
   s.dependency 'Utils'
   s.dependency 'Kingfisher'
+  s.dependency 'Networking'
 
 end

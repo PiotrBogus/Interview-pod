@@ -2,9 +2,8 @@
 import Foundation
 import Shared
 import Combine
-
-public typealias MovieDetailsFetchCompletion = (Result<Movie?, NetworkingError>) -> Void
+import Networking
 
 public protocol MovieDetailsAPIFetcher {
-    func fetchDetails(for id: String, completion: @escaping MovieDetailsFetchCompletion) -> AnyCancellable?
+    func fetchDetails(for id: String) -> AnyPublisher<Movie, NetworkRequestError>
 }

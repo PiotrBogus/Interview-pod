@@ -1,9 +1,8 @@
 
 import Shared
 import Combine
-
-public typealias MovieListFetchCompletion = (Result<MovieList?, NetworkingError>) -> Void
+import Networking
 
 public protocol MovieListAPIFetcher {
-    func fetchList(for searchedPhrase: String, page: Int, completion: @escaping MovieListFetchCompletion) -> AnyCancellable?
+    func fetchList(for searchedPhrase: String, page: Int) -> AnyPublisher<MovieList, NetworkRequestError>
 }

@@ -6,19 +6,31 @@ import MovieList
 import Combine
 
 final class MovieDetailsAPIFetcherIntegration: MovieDetailsAPIFetcher {
+    private let apiClient: APIClient
     
-    private let endpoint = "/"
-    
-    private let networkingService: NetworkingService
-    
-    init(networkingService: NetworkingService = DefaultNetworkingService(baseURL: .baseURL)) {
-        self.networkingService = networkingService
+    init(apiClient: APIClient = APIClient(baseURL: .baseURL)) {
+        self.apiClient = apiClient
     }
     
-    func fetchDetails(for id: String, completion: @escaping MovieDetailsFetchCompletion) -> AnyCancellable? {
-        let args = ["apikey": .apiKey,
-                    "i": id]
-        let endpointDefiniton = CallableEndoint(endpoint: endpoint, type: .get(args: args))
-        return networkingService.request(with: endpointDefiniton, completion: completion)
+    func fetchDetails(for id: String) -> AnyPublisher<Movie, NetworkRequestError> {
+        return apiClient.dispatch(MovieDetailsRequest(id: id))
     }    
+}
+
+struct MovieDetailsRequest: HTTPRequest {    
+    typealias ReturnType = Movie
+    
+    let path: String = "/"
+    var queryParams: HTTPQueryParams? {[
+        "apikey": apiKey,
+        "i": id
+    ]}
+    
+    private let apiKey: String
+    private let id: String
+    
+    init(apiKey: String = .apiKey, id: String) {
+        self.apiKey = apiKey
+        self.id = id
+    }
 }

@@ -5,10 +5,12 @@ PODS:
   - Kingfisher (6.3.1)
   - MovieList (1.0):
     - Kingfisher
+    - Networking
     - Shared
     - Utils
   - MovieList/Tests (1.0):
     - Kingfisher
+    - Networking
     - Shared
     - Utils
   - Networking (1.0):
@@ -71,7 +73,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   Criollo: 4e8c33da5630ac1bb42ca490c8046fc9a62ab910
   Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
-  MovieList: 2918ca536e8c1f18fb47b8da706b41fc1aee3f01
+  MovieList: 55c1941350f78016d2c8c2919207e0b02a05b115
   Networking: 36a8c5618a9c302667a589c07e44a9d335015151
   PagesLinks: 67639ff36262f18caaa32309855fc84cec19171e
   Shared: daef0ce0d7ed8c878795eeac0969606cf9c4233c

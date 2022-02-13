@@ -1,4 +1,3 @@
-
 import os.log
 
 public struct Logger {
