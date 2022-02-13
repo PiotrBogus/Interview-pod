@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2126B4970BAF7982A6F49113 /* Pods_InterviewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565D475C37C2A64F1D1223E4 /* Pods_InterviewUITests.framework */; };
+		2394C28D27B98F730076F93E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2394C28C27B98F730076F93E /* AppCoordinator.swift */; };
 		53247D657BAC905B5BA4EE63 /* Pods_Interview.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A74A522EF8B2905E3613CE3B /* Pods_Interview.framework */; };
 		B36C868B26AF29D40023B12E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C868A26AF29D40023B12E /* AppDelegate.swift */; };
 		B36C868D26AF29D40023B12E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C868C26AF29D40023B12E /* SceneDelegate.swift */; };
@@ -116,6 +117,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2394C28C27B98F730076F93E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		28E89B6396DAF6E69EA34296 /* Pods-Interview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interview.debug.xcconfig"; path = "Target Support Files/Pods-Interview/Pods-Interview.debug.xcconfig"; sourceTree = "<group>"; };
 		565D475C37C2A64F1D1223E4 /* Pods_InterviewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75653E2CFEC600686B18BD7E /* Pods_InterviewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InterviewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +273,7 @@
 			children = (
 				B36C868A26AF29D40023B12E /* AppDelegate.swift */,
 				B36C868C26AF29D40023B12E /* SceneDelegate.swift */,
+				2394C28C27B98F730076F93E /* AppCoordinator.swift */,
 				B384513626B1A5B800C183D9 /* MovieListIntegration */,
 				B36C86BA26AF2B830023B12E /* Intro */,
 				B36C869326AF29D60023B12E /* Assets.xcassets */,
@@ -792,6 +795,7 @@
 			files = (
 				B3E38B95271CA417009F5FCE /* BaseUrlBuilder.swift in Sources */,
 				B384508626B0700E00C183D9 /* IntroViewRouter.swift in Sources */,
+				2394C28D27B98F730076F93E /* AppCoordinator.swift in Sources */,
 				B384514526B1B16E00C183D9 /* String+Variables.swift in Sources */,
 				B36C868F26AF29D40023B12E /* IntroViewController.swift in Sources */,
 				B36C868B26AF29D40023B12E /* AppDelegate.swift in Sources */,
